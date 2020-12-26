@@ -8,7 +8,7 @@
     <style>
         body {
 
-            background-color: black;
+            background-color: blue;
         }
 
         /* img{
@@ -21,11 +21,13 @@
             height: 100vh;
             width: 100vw
         }
-        #koala{
+
+        #koala {
             height: 50%;
             width: 50%;
         }
-        img{
+
+        img {
             position: absolute;
         }
     </style>
@@ -42,15 +44,21 @@
         //    const koala = document.getElementById("koala");
         const koala = document.querySelector("img");
         var a;
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
         document.querySelector("#main").addEventListener("click", (event) => {
             console.log("cliked");
             // a = event.target.getBoundingClientRect();
-            koala.style.left = event.clientX+"px";
-            koala.style.top = event.clientY+"px";
+            koala.style.left = event.clientX + "px";
+            koala.style.top = event.clientY + "px";
             // koala.style.left = "800px";
             // koala.style.top = "500px;"
             console.log(event.clientX);
             console.log(event.clientY);
+            document.querySelector("#main").style.backgroundColor = `rgb( ${getRandomInt(256)} ,${getRandomInt(256)} ,
+            ${getRandomInt(256)} )`;
 
             //    document.querySelector("div").style.backgroundColor="red";
             //    koala.style.backgroundColor="white";
