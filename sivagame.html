@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            background-color: black;
+        }
+
+        /* img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        } */
+
+        #main {
+            height: 100vh;
+            width: 100vw
+        }
+        #koala{
+            height: 50%;
+            width: 50%;
+        }
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="koala">
+            <img src="./koala1.png" alt="">
+        </div>
+    </div>
+    <script>
+        //    const koala = document.getElementById("koala");
+        const koala = document.querySelector("img");
+        var a;
+        document.querySelector("#main").addEventListener("click", (event) => {
+            console.log("cliked");
+            // a = event.target.getBoundingClientRect();
+            koala.style.left = event.clientX+"px";
+            koala.style.top = event.clientY+"px";
+            // koala.style.left = "800px";
+            // koala.style.top = "500px;"
+            console.log(event.clientX);
+            console.log(event.clientY);
+
+            //    document.querySelector("div").style.backgroundColor="red";
+            //    koala.style.backgroundColor="white";
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>
